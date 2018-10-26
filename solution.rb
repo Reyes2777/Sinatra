@@ -1,7 +1,13 @@
 require "sinatra"
 
-get '/makers/:nombre' do
-    @name = params[:nombre]
-    @name.capitalize!
+get '/' do
+    if params == {} 
+        @name = "desconocido"
+    elsif params["nombre"] == ""
+        @name = "desconocido"
+    else
+    @name = params["nombre"]
+    end
     erb :index
 end
+
