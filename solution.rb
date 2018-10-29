@@ -1,13 +1,11 @@
 require "sinatra"
 
-get '/' do
-    if params == {} 
-        @name = "desconocido"
-    elsif params["nombre"] == ""
-        @name = "desconocido"
-    else
-    @name = params["nombre"]
-    end
+get "/" do
+    @nombre = params["nombre"]
     erb :index
-end
-
+  end
+  
+  post "/" do
+    @nombre = params["nombre"]
+    "<h1>¡Hola! #{@nombre}</h1>"
+  end
