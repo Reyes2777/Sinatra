@@ -1,5 +1,8 @@
 <h1>Hola ingresa el nombre</h1>
-<form action="/" method="post">
-  <input type="text" name="nombre" value="<%= @nombre %>">
-  <input type="submit">
-</form>
+<% (1..150).each do |i| %>
+    <%if i%2 == 0 %>
+        <h2><%= i %> Soy Par!</h2>
+        <% else %>
+        <h2><%= i %> Soy Impar!</h2>
+       <%end%>
+<% end%> 
