@@ -1,8 +1,7 @@
 require "sinatra"
 
 get "/" do
-    @nombre = params["nombre"]
-    erb :index
+    "HcUy6Re2LLBRtj"
   end
   
   post "/" do
